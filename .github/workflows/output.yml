@@ -9,3 +9,4 @@ jobs:
         run: echo $JSON
         env:
           JSON: ${{ toJSON(github)}}
+          #https://github.com/actions/runner/issues/1656
