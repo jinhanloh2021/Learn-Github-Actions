@@ -9,7 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output event data
-        run: echo "${{ toJSON(github.event) }}"
+        run: echo $JSON.event
+        env:
+          JSON: ${{ toJSON(github)}}
       - name: Get code
         uses: actions/checkout@v3
       - name: Install dependencies
